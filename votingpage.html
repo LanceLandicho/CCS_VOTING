@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting Page - CCS SBO</title>
+  <link rel="stylesheet" href="votingpage.css">
+</head>
+<body>
+  <div class="voting-container">
+    <h1>CCS SBO </h1>
+    <h2>Choose Your Candidates</h2>
+
+    <form id="voteForm">
+      <!-- President -->
+      <div class="position">
+        <h3>President</h3>
+        <label><input type="radio" name="president" value="Candidate 1" required> Candidate 1</label>
+        <label><input type="radio" name="president" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- Vice President for Budget & Financial Management -->
+      <div class="position">
+        <h3>Vice President for Budget & Financial Management</h3>
+        <label><input type="radio" name="vp_budget" value="Candidate 1" required> Candidate 1</label>
+        <label><input type="radio" name="vp_budget" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- Vice President for Internal & External Affairs -->
+      <div class="position">
+        <h3>Vice President for Internal & External Affairs</h3>
+        <label><input type="radio" name="vp_internal" value="Candidate 1" required> Candidate 1</label>
+        <label><input type="radio" name="vp_internal" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- Treasurer -->
+      <div class="position">
+        <h3>Treasurer</h3>
+        <label><input type="radio" name="treasurer" value="Candidate 1" required> Candidate 1</label>
+        <label><input type="radio" name="treasurer" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- Auditor -->
+      <div class="position">
+        <h3>Auditor</h3>
+        <label><input type="radio" name="auditor" value="Candidate 1" required> Candidate 1</label>
+        <label><input type="radio" name="auditor" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- Public Information Officer -->
+      <div class="position">
+        <h3>Public Information Officer</h3>
+        <label><input type="radio" name="pio" value="Candidate 1" required> Candidate 1</label>
+        <label><input type="radio" name="pio" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- Student Operation Organizer -->
+      <div class="position">
+        <h3>Student Operation Organizer (2)</h3>
+        <label><input type="checkbox" name="soo" value="Candidate 1"> Candidate 1</label>
+        <label><input type="checkbox" name="soo" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- IT Representative -->
+      <div class="position">
+        <h3>IT Representative (2)</h3>
+        <label><input type="checkbox" name="it_rep" value="Candidate 1"> Candidate 1</label>
+        <label><input type="checkbox" name="it_rep" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- CS Representative -->
+      <div class="position">
+        <h3>CS Representative (2)</h3>
+        <label><input type="checkbox" name="cs_rep" value="Candidate 1"> Candidate 1</label>
+        <label><input type="checkbox" name="cs_rep" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- IS Representative -->
+      <div class="position">
+        <h3>IS Representative (2)</h3>
+        <label><input type="checkbox" name="is_rep" value="Candidate 1"> Candidate 1</label>
+        <label><input type="checkbox" name="is_rep" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- GAD Representative -->
+      <div class="position">
+        <h3>GAD Representative</h3>
+        <label><input type="radio" name="gad_rep" value="Candidate 1" required> Candidate 1</label>
+        <label><input type="radio" name="gad_rep" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- Codex Director -->
+      <div class="position">
+        <h3>Codex Director</h3>
+        <label><input type="radio" name="codex" value="Candidate 1" required> Candidate 1</label>
+        <label><input type="radio" name="codex" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- Robotix Director -->
+      <div class="position">
+        <h3>Robotix Director</h3>
+        <label><input type="radio" name="robotix" value="Candidate 1" required> Candidate 1</label>
+        <label><input type="radio" name="robotix" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- Netac Director -->
+      <div class="position">
+        <h3>Netac Director</h3>
+        <label><input type="radio" name="netac" value="Candidate 1" required> Candidate 1</label>
+        <label><input type="radio" name="netac" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- Graphicos Director -->
+      <div class="position">
+        <h3>Graphicos Director</h3>
+        <label><input type="radio" name="graphicos" value="Candidate 1" required> Candidate 1</label>
+        <label><input type="radio" name="graphicos" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <!-- News Code Director -->
+      <div class="position">
+        <h3>News Code Director</h3>
+        <label><input type="radio" name="news" value="Candidate 1" required> Candidate 1</label>
+        <label><input type="radio" name="news" value="Candidate 2"> Candidate 2</label>
+      </div>
+
+      <button type="submit">Submit Vote</button>
+    </form>
+  </div>
+
+  <script>
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    if (!loggedInUser) {
+      alert("You must log in first!");
+      window.location.href = "login.html";
+    }
+
+    document.getElementById("voteForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("✅ Your vote has been submitted successfully!");
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>
+

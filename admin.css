@@ -1,0 +1,220 @@
+
+/* === Admin Voting css design  === */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #7c1f1f, #c56a11);
+  color: #fff;
+}
+
+/* Container layout */
+.admin-container {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #3b0a0a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 10px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.sidebar .logo {
+  display: block;
+  width: 256px;         
+  height: 300px;
+  margin: -20px auto 10px;  
+  object-fit: cover;
+  border-radius: 70px;
+ 
+}
+
+.sidebar h2 {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  color: #ffb347;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  width: 100%;
+}
+
+.sidebar button {
+
+  width: 105%;
+  background: #c56a11;
+  border: none;
+  color: #fff;
+  padding:16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: smaller;
+}
+
+.sidebar button:hover {
+  background: #ff8c42;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+header p {
+  color: #ffd699;
+}
+
+.content-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.content-section h2 {
+  color: #ffd699;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select, button[type="submit"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+}
+
+input, select, button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+button {
+  background: #ffcc00;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+button:hover {
+  background: #ffdb4d;
+}
+
+.candidate-list {
+  margin-top: 30px;
+}
+
+.candidate-item {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+/* Results Styling */
+#resultsDisplay div {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+
+
+input, select {
+  background: #fff;
+  color: #333;
+}
+
+button[type="submit"] {
+  background: #c56a11;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+button[type="submit"]:hover {
+  background: #ff8c42;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+ul li {
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+

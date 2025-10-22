@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - CCS SBO</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+       <img src="images/SBOlogo.jpg" alt="CCS SBO Logo" class="logo" />
+      <h2>SBO ADMIN DASHBOARD</h2>
+      <nav>
+        <button id="uploadTabBtn" class="active">📤 UPLOAD CANDIDATES</button>
+        <button id="emailsTabBtn">📧 STUDENT EMAILS</button>
+        <button id="resultsTabBtn">📊 RESULTS</button>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Upload Candidates -->
+      <section id="uploadTab" class="tab-content active">
+        <h1>Upload Candidates</h1>
+        <form id="candidateForm">
+          <label for="positionSelect">Select Position:</label>
+          <select id="positionSelect" required>
+            <option value="">-- Choose a Position --</option>
+            <option>President</option>
+            <option>Vice President for Budget & Financial Management</option>
+            <option>Vice President for Internal & External Affairs</option>
+            <option>Treasurer</option>
+            <option>Auditor</option>
+            <option>Public Information Officer</option>
+            <option>Student Operation Organizer</option>
+            <option>IT Representative</option>
+            <option>CS Representative</option>
+            <option>IS Representative</option>
+            <option>GAD Representative</option>
+            <option>Codex Director</option>
+            <option>Robotix Director</option>
+            <option>Netac Director</option>
+            <option>Graphicos Director</option>
+            <option>News Code Director</option>
+          </select>
+
+          <input type="text" id="candidateName" placeholder="Candidate Full Name" required />
+
+           <input type="text" id="candidatePartylist" placeholder="Partylist Name (e.g. Unity Party)" required />
+          <button type="submit">Add Candidate</button>
+        </form>
+
+        <div class="candidate-list">
+          <h2>Current Candidates</h2>
+          <div id="candidateDisplay"></div>
+        </div>
+      </section>
+
+      <!-- Student Emails -->
+      <section id="emailsTab" class="tab-content">
+        <h1>Student Emails</h1>
+        <ul id="studentEmailList"></ul>
+      </section>
+
+      <!-- Results -->
+      <section id="resultsTab" class="tab-content">
+        <h1>Voting Results</h1>
+        <div id="resultsDisplay"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

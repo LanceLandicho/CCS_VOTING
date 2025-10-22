@@ -1,0 +1,121 @@
+/* === CCS SBO Voting System Theme === */
+
+
+:root {
+  --bg-dark: #7B1E1E;         /* Deep maroon background */
+  --bg-accent: #A8431C;       /* Reddish-orange tone */
+  --accent-color: #F0A52B;    /* Gold highlight */
+  --text-light: #FFF6E9;      /* Soft white text */
+  --input-bg: rgba(255, 255, 255, 0.15);
+  --input-border: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--bg-dark), var(--bg-accent));
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* === Form / Voting Containers === */
+.form-container,
+.voting-container {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 40px 60px;
+  border-radius: 100px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 300px;
+  max-width: 420px;
+  animation:fadeIn 0.8s ease;
+}
+
+
+/* === Headings === */
+h1, h2, h3 {
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* === Input Fields === */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  border-radius: 10px;
+  color: var(--text-light);
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* === Buttons === */
+button {
+  display: block;
+  margin: 20px auto; /* centers button horizontally */
+  padding: 20px 50px;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 10px;
+  color: var(--bg-dark);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: auto; /* prevents full width */
+  text-align: center;
+}
+
+button:hover {
+  background: #ffbb42;
+  transform: translateY(-2px);
+}
+
+/* === Links === */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === Voting Positions Layout === */
+.position {
+  margin: 25px 0;
+  text-align: left;
+}
+
+.position h3 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+label {
+  display: flex;
+  margin: 6px 0;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+

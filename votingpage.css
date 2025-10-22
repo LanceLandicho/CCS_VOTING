@@ -1,0 +1,106 @@
+/* === CCS SBO Voting System Theme - Voting Page === */
+
+:root {
+  --bg-dark: #7B1E1E;
+  --bg-accent: #A8431C;
+  --accent-color: #F0A52B;
+  --text-light: #FFF6E9;
+  --input-bg: rgba(255, 255, 255, 0.15);
+  --input-border: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--bg-dark), var(--bg-accent));
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 50px 0;
+  overflow-y: auto;
+  animation: fadeIn 0.8s ease;
+}
+
+/* === Voting Container === */
+.voting-container {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 40px 60px;
+  border-radius: 50px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 90%;
+  max-width: 650px;
+}
+
+/* === Headings === */
+h1, h2, h3 {
+  color: var(--accent-color);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+h1 { font-size: 28px; }
+h2 { font-size: 20px; margin-bottom: 30px; }
+
+/* === Position Boxes === */
+.position {
+  margin: 25px 0;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.position h3 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* === Radio & Checkbox === */
+label {
+  display: flex;
+  align-items: center;
+  gap: 20px;                /* space between the radio button and text */
+  margin-bottom: 30px;      /* adds space between each candidate option */
+  font-size: 15px;
+  cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--accent-color);
+  transform: scale(2.5  );     /* make the button bigger */
+  margin-right: 25px;        /* space between button and text */
+  cursor: pointer;
+  vertical-align: middle;    /* keeps it aligned nicely with text */
+}
+
+/* === Button === */
+button {
+  display: block;
+  margin: 30px auto 0;
+  padding: 15px 50px;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 10px;
+  color: var(--bg-dark);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #ffbb42;
+  transform: translateY(-2px);
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
